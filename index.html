@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosticería San Juan Ixtacal | El mejor pollo con adobo especial</title>
+    <style>
+        :root {
+            --color-primario: #D32F2F; /* Rojo apetitoso */
+            --color-secundario: #FF9800; /* Naranja dorado */
+            --color-texto: #333;
+            --color-fondo: #FFF8E1; /* Crema suave */
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--color-fondo); color: var(--color-texto); line-height: 1.6; }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=800&q=80'); /* Imagen de ejemplo */
+            background-size: cover; background-position: center;
+            color: white; text-align: center; padding: 80px 20px;
+        }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.2rem; margin-bottom: 20px; }
+        .btn {
+            display: inline-block; background-color: #25D366; color: white; padding: 15px 30px;
+            text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: transform 0.2s;
+        }
+        .btn:hover { transform: scale(1.05); }
+
+        /* Menú */
+        .menu { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
+        .menu h2 { text-align: center; color: var(--color-primario); margin-bottom: 30px; font-size: 2rem; }
+        .menu-item {
+            background: white; border-radius: 10px; padding: 20px; margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center;
+        }
+        .menu-item h3 { color: var(--color-primario); margin-bottom: 5px; }
+        .menu-item p { font-size: 0.9rem; color: #666; }
+        .precio { font-size: 1.3rem; font-weight: bold; color: var(--color-secundario); white-space: nowrap; margin-left: 15px; }
+
+        /* Especialidad */
+        .especialidad {
+            background-color: var(--color-primario); color: white; text-align: center; padding: 40px 20px;
+        }
+        .especialidad h2 { margin-bottom: 15px; }
+
+        /* Ubicación */
+        .ubicacion { padding: 40px 20px; text-align: center; }
+        .ubicacion p { font-size: 1.1rem; margin-bottom: 20px; }
+
+        /* Botón Flotante WhatsApp */
+        .whatsapp-float {
+            position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white;
+            width: 60px; height: 60px; border-radius: 50%; text-align: center; font-size: 30px;
+            line-height: 60px; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); z-index: 100; text-decoration: none;
+        }
+
+        /* Footer */
+        footer { background-color: #222; color: white; text-align: center; padding: 20px; font-size: 0.9rem; }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+            .menu-item { flex-direction: column; text-align: center; }
+            .precio { margin-left: 0; margin-top: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header class="hero">
+        <h1>🍗 Rosticería San Juan</h1>
+        <p>El sabor que une a la comunidad. Con nuestro adobo especial de la casa.</p>
+        <p><em>📍 Enfrente del quiosco, al lado de la iglesia</em></p>
+        <br>
+        <a href="https://wa.me/521XXXXXXXXXX?text=Hola,%20quiero%20hacer%20un%20pedido%20de%20pollo" class="btn" target="_blank">📲 Pedir por WhatsApp</a>
+    </header>
+
+    <!-- Menú -->
+    <section class="menu">
+        <h2>Nuestro Menú</h2>
+        
+        <div class="menu-item">
+            <div>
+                <h3>🍗 Pollo Completo</h3>
+                <p>Incluye 4 bolillos o ½ kg de tortillas + arroz o sopa fría.</p>
+            </div>
+            <span class="precio">$150</span>
+        </div>
+
+        <div class="menu-item">
+            <div>
+                <h3>🥔 Papas a la Francesa</h3>
+                <p>Disponibles en tres tamaños para compartir o disfrutar solo.</p>
+            </div>
+            <span class="precio">Gde $50 / Med $40 / Chica $30</span>
+        </div>
+
+        <div class="menu-item">
+            <div>
+                <h3>🌮 Tortas Surtidas</h3>
+                <p>Preparadas al momento con jitomate, cebolla y aguacate fresco.</p>
+            </div>
+            <span class="precio">$30</span>
+        </div>
+
+        <div class="menu-item">
+            <div>
+                <h3>🌶️ Salsas Artesanales</h3>
+                <p>Variedad de sabores para darle el toque perfecto a tu pollo.</p>
+            </div>
+            <span class="precio">$35</span>
+        </div>
+
+        <div class="menu-item">
+            <div>
+                <h3>🔥 Alitas (Promoción)</h3>
+                <p>Crujientes y bañadas en nuestro adobo especial.</p>
+            </div>
+            <span class="precio">3 piezas x $15</span>
+        </div>
+
+        <div class="menu-item">
+            <div>
+                <h3>🍽️ Charolas a tu gusto</h3>
+                <p>Arma tu charola con las piezas que tú elijas. Ideal para reuniones.</p>
+            </div>
+            <span class="precio">Consultar</span>
+        </div>
+    </section>
+
+    <!-- Especialidad -->
+    <section class="especialidad">
+        <h2>✨ El Secreto está en el Adobo ✨</h2>
+        <p>Nuestra receta especial de la casa hace que cada pieza de pollo sea jugosa, dorada e inolvidable. ¡Pruébalo y repite!</p>
+    </section>
+
+    <!-- Ubicación -->
+    <section class="ubicacion">
+        <h2>📍 ¿Dónde estamos?</h2>
+        <p>Av. Principal de San Juan Ixtacal.<br><strong>Justo enfrente del quiosco, al lado de la iglesia.</strong></p>
+        <!-- Aquí puedes incrustar un mapa real de Google Maps después -->
+        <p>🕒 Abiertos todos los días de 1:00 PM a 9:00 PM</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Rosticería San Juan Ixtacal. Hecho con ❤️ para la comunidad.</p>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/521XXXXXXXXXX?text=Hola,%20quiero%20hacer%20un%20pedido" class="whatsapp-float" target="_blank">💬</a>
+
+</body>
+</html>
