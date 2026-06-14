@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rosticería El Kiosko | Pollo Rostizado de Horno en San Juan Ixtacal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Rosticería El Kiosko | Pollo Rostizado en San Juan Ixtacal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --color-primario: #8B0000; /* Rojo vino profundo, serio y elegante */
-            --color-acento: #D4AF37;   /* Dorado para resaltar calidad y apetito */
-            --color-fondo: #FAFAFA;    /* Blanco hueso, limpio */
-            --color-texto: #1A1A1A;    /* Negro carbón para máxima legibilidad */
-            --color-gris: #555555;
+            --rojo-mexicano: #C41E3A;
+            --verde-mexicano: #006847;
+            --naranja-vibrante: #FF6B35;
+            --amarillo-oro: #FFD700;
+            --color-texto: #1A1A1A;
+            --color-fondo: #FFF5E6;
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -25,200 +26,216 @@
 
         h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
 
-        /* Hero Section: Impactante y serio */
+        /* Hero Section con estilo mexicano */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&w=1200&q=80');
+            background: linear-gradient(rgba(196, 30, 58, 0.85), rgba(0, 104, 71, 0.85)), 
+                        url('https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=1200&q=80');
             background-size: cover; 
             background-position: center;
             color: white; 
             text-align: center; 
-            padding: 120px 20px;
+            padding: 100px 20px;
+            border-bottom: 8px solid var(--amarillo-oro);
         }
         .hero h1 { 
             font-size: 3.5rem; 
-            font-weight: 800; 
+            font-weight: 900; 
             margin-bottom: 15px; 
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             text-transform: uppercase;
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.3);
         }
         .hero p { 
             font-size: 1.3rem; 
             margin-bottom: 10px; 
-            font-weight: 400;
-            color: #E0E0E0;
+            font-weight: 600;
         }
         .hero .ubicacion-hero { 
             font-size: 1.1rem; 
             margin-bottom: 35px; 
-            color: var(--color-acento);
-            font-weight: 600;
-            letter-spacing: 1px;
+            color: var(--amarillo-oro);
+            font-weight: 700;
         }
         
         .btn {
             display: inline-block; 
-            background-color: var(--color-primario); 
+            background-color: var(--naranja-vibrante); 
             color: white; 
-            padding: 18px 40px;
+            padding: 18px 45px;
             text-decoration: none; 
-            border-radius: 4px; 
+            border-radius: 50px; 
             font-family: 'Montserrat', sans-serif;
             font-weight: 700; 
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             transition: all 0.3s ease;
-            border: 2px solid var(--color-primario);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            border: 3px solid var(--amarillo-oro);
         }
         .btn:hover { 
-            background-color: transparent; 
-            color: white;
-            border-color: white;
+            transform: scale(1.05);
+            background-color: var(--rojo-mexicano);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
         }
 
-        /* Menú: Limpio, serio y con imágenes que provocan apetito */
-        .menu { padding: 80px 20px; max-width: 900px; margin: 0 auto; }
+        /* Menú con estilo mexicano */
+        .menu { padding: 60px 20px; max-width: 900px; margin: 0 auto; }
         .menu h2 { 
             text-align: center; 
-            color: var(--color-primario); 
+            color: var(--rojo-mexicano); 
             margin-bottom: 50px; 
             font-size: 2.5rem; 
-            font-weight: 800;
+            font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            text-shadow: 2px 2px 0px var(--amarillo-oro);
         }
         
         .menu-item {
             background: white; 
-            border-radius: 8px; 
+            border-radius: 12px; 
             padding: 20px; 
             margin-bottom: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+            box-shadow: 0 5px 20px rgba(196, 30, 58, 0.15); 
             display: flex; 
             align-items: center; 
-            gap: 25px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-left: 4px solid var(--color-acento);
+            gap: 20px;
+            transition: all 0.3s ease;
+            border-left: 6px solid var(--verde-mexicano);
+            border-top: 4px solid var(--rojo-mexicano);
         }
         .menu-item:hover { 
-            transform: translateY(-5px); 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(196, 30, 58, 0.25);
         }
         
         .menu-item img {
-            width: 120px; 
-            height: 120px; 
-            border-radius: 8px; 
+            width: 110px; 
+            height: 110px; 
+            border-radius: 10px; 
             object-fit: cover; 
             flex-shrink: 0;
+            border: 3px solid var(--amarillo-oro);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
         }
         
         .menu-info { flex-grow: 1; }
         .menu-info h3 { 
-            color: var(--color-texto); 
+            color: var(--rojo-mexicano); 
             margin-bottom: 8px; 
             font-size: 1.3rem; 
             font-weight: 700;
         }
         .menu-info p { 
-            font-size: 1rem; 
-            color: var(--color-gris); 
+            font-size: 0.95rem; 
+            color: #555; 
             line-height: 1.5; 
         }
         
         .precio { 
-            font-size: 1.5rem; 
-            font-weight: 800; 
-            color: var(--color-primario); 
+            font-size: 1.6rem; 
+            font-weight: 900; 
+            color: var(--verde-mexicano); 
             white-space: nowrap; 
             text-align: right; 
-            min-width: 90px;
+            min-width: 100px;
             font-family: 'Montserrat', sans-serif;
+            text-shadow: 1px 1px 0px var(--amarillo-oro);
         }
 
-        /* Especialidad: Sección de alto impacto */
+        /* Especialidad */
         .especialidad {
-            background-color: var(--color-texto); 
+            background: linear-gradient(135deg, var(--rojo-mexicano), var(--naranja-vibrante)); 
             color: white; 
             text-align: center; 
-            padding: 80px 20px;
+            padding: 60px 20px;
+            border-top: 6px solid var(--amarillo-oro);
+            border-bottom: 6px solid var(--verde-mexicano);
         }
         .especialidad h2 { 
             margin-bottom: 20px; 
             font-size: 2.2rem; 
-            color: var(--color-acento);
+            font-weight: 900;
             text-transform: uppercase;
+            letter-spacing: 2px;
         }
         .especialidad p { 
             font-size: 1.2rem; 
             max-width: 700px; 
             margin: 0 auto; 
-            color: #CCCCCC;
             line-height: 1.8;
+            font-weight: 600;
         }
 
         /* Ubicación */
-        .ubicacion { padding: 80px 20px; text-align: center; background-color: white; }
+        .ubicacion { 
+            padding: 60px 20px; 
+            text-align: center; 
+            background-color: white;
+            border-top: 6px solid var(--naranja-vibrante);
+        }
         .ubicacion h2 { 
-            color: var(--color-primario); 
+            color: var(--rojo-mexicano); 
             margin-bottom: 25px; 
             font-size: 2.2rem; 
+            font-weight: 900;
             text-transform: uppercase;
         }
         .ubicacion p { 
             font-size: 1.1rem; 
             margin-bottom: 15px; 
-            color: var(--color-gris);
+            color: #555;
+            font-weight: 600;
         }
-        .ubicacion strong { color: var(--color-texto); }
+        .ubicacion strong { color: var(--verde-mexicano); }
         
         .mapa-placeholder {
             width: 100%; 
-            max-width: 700px; 
-            height: 300px; 
-            background-color: #EEEEEE; 
+            max-width: 600px; 
+            height: 250px; 
+            background: linear-gradient(135deg, #f5f5f5, #e0e0e0); 
             margin: 30px auto; 
-            border-radius: 8px; 
+            border-radius: 12px; 
             display: flex; 
             align-items: center; 
             justify-content: center; 
-            color: #888; 
-            font-weight: 600; 
-            border: 2px solid #DDDDDD;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            color: var(--rojo-mexicano); 
+            font-weight: 700; 
+            border: 4px dashed var(--naranja-vibrante);
+            font-size: 1.1rem;
         }
 
-        /* Botón Flotante WhatsApp (Sin emojis, estilo profesional) */
+        /* Botón Flotante WhatsApp */
         .whatsapp-float {
             position: fixed; 
             bottom: 30px; 
             right: 30px; 
             background-color: #25D366; 
             color: white;
-            width: 60px; 
-            height: 60px; 
+            width: 65px; 
+            height: 65px; 
             border-radius: 50%; 
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4); 
             z-index: 100; 
             text-decoration: none;
             transition: transform 0.3s ease;
+            border: 3px solid var(--amarillo-oro);
         }
-        .whatsapp-float:hover { transform: scale(1.1); }
-        .whatsapp-float svg { width: 32px; height: 32px; fill: white; }
+        .whatsapp-float:hover { transform: scale(1.15) rotate(10deg); }
+        .whatsapp-float svg { width: 35px; height: 35px; fill: white; }
 
         /* Footer */
         footer { 
-            background-color: #111; 
-            color: #777; 
+            background-color: var(--color-texto); 
+            color: var(--amarillo-oro); 
             text-align: center; 
             padding: 30px 20px; 
             font-size: 0.9rem; 
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-weight: 600;
+            border-top: 6px solid var(--rojo-mexicano);
         }
 
         /* Responsive */
@@ -226,7 +243,7 @@
             .hero h1 { font-size: 2.2rem; }
             .hero p { font-size: 1.1rem; }
             .menu-item { flex-direction: column; text-align: center; padding: 25px 20px; }
-            .menu-item img { width: 100%; height: 200px; margin-bottom: 15px; }
+            .menu-item img { width: 100%; height: 180px; margin-bottom: 15px; }
             .precio { margin-top: 15px; text-align: center; }
             .menu h2, .especialidad h2, .ubicacion h2 { font-size: 1.8rem; }
         }
@@ -236,36 +253,36 @@
 
     <!-- Encabezado -->
     <header class="hero">
-        <h1>Rosticería El Kiosko</h1>
-        <p>Pollo rostizado de horno con nuestro adobo especial de la casa.</p>
-        <p class="ubicacion-hero">Avenida Principal, San Juan Ixtacal. Frente al quiosco, junto a la iglesia.</p>
-        <a href="https://wa.me/521XXXXXXXXXX?text=Hola,%20me%20gustaria%20hacer%20un%20pedido" class="btn" target="_blank">Hacer un pedido</a>
+        <h1>🔥 Rosticería El Kiosko 🔥</h1>
+        <p>¡El auténtico sabor del pollo rostizado de horno!</p>
+        <p class="ubicacion-hero">📍 Avenida Principal, San Juan Ixtacal - Frente al quiosco, junto a la iglesia</p>
+        <a href="https://wa.me/521XXXXXXXXXX?text=Hola,%20quiero%20hacer%20un%20pedido" class="btn" target="_blank">Hacer Pedido</a>
     </header>
 
     <!-- Menú -->
     <section class="menu">
-        <h2>Nuestro Menú</h2>
+        <h2>🍗 Nuestro Menú 🌮</h2>
         
         <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&w=400&q=80" alt="Pollo rostizado de horno">
+            <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?auto=format&fit=crop&w=400&q=80" alt="Pollo rostizado">
             <div class="menu-info">
                 <h3>Pollo Rostizado Completo</h3>
-                <p>Jugoso pollo de horno. Incluye 4 bolillos o medio kilo de tortillas, más arroz o sopa fría.</p>
+                <p>Jugoso pollo de horno con nuestro adobo especial. Incluye 4 bolillos o ½ kg de tortillas + arroz o sopa fría.</p>
             </div>
             <span class="precio">$150</span>
         </div>
 
         <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?auto=format&fit=crop&w=400&q=80" alt="Papas a la francesa">
+            <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?auto=format&fit=crop&w=400&q=80" alt="Papas">
             <div class="menu-info">
                 <h3>Papas a la Francesa</h3>
-                <p>Crujientes y doradas. Disponibles en tres tamaños para acompañar tu pedido.</p>
+                <p>Doradas y crujientes. Disponibles en tres tamaños.</p>
             </div>
             <span class="precio">G: $50<br>M: $40<br>Ch: $30</span>
         </div>
 
         <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1628205423858-a5c9f8a8a5a5?auto=format&fit=crop&w=400&q=80" alt="Torta mexicana">
+            <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=400&q=80" alt="Torta mexicana">
             <div class="menu-info">
                 <h3>Tortas Preparadas</h3>
                 <p>Elaboradas al momento con jitomate, cebolla y aguacate fresco.</p>
@@ -274,10 +291,10 @@
         </div>
 
         <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1599321955726-e04842d6f2e7?auto=format&fit=crop&w=400&q=80" alt="Salsas artesanales">
+            <img src="https://images.unsplash.com/photo-1588612502660-f65563914902?auto=format&fit=crop&w=400&q=80" alt="Salsas">
             <div class="menu-info">
                 <h3>Salsas Artesanales</h3>
-                <p>Variedad de sabores tradicionales para complementar el sabor de nuestro pollo.</p>
+                <p>Variedad de sabores tradicionales mexicanos.</p>
             </div>
             <span class="precio">$35</span>
         </div>
@@ -286,16 +303,16 @@
             <img src="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=400&q=80" alt="Alitas">
             <div class="menu-info">
                 <h3>Alitas</h3>
-                <p>Crujientes y bañadas en nuestro adobo especial. Promoción especial.</p>
+                <p>Crujientes y bañadas en nuestro adobo especial. ¡Promoción!</p>
             </div>
             <span class="precio">3 x $15</span>
         </div>
 
         <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=400&q=80" alt="Charolas para eventos">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=400&q=80" alt="Charolas">
             <div class="menu-info">
-                <h3>Charolas a tu gusto</h3>
-                <p>Arma tu charola con las piezas que elijas. La opción ideal para reuniones y eventos.</p>
+                <h3>Charolas a tu Gusto</h3>
+                <p>Arma tu charola con las piezas que elijas. Ideal para reuniones.</p>
             </div>
             <span class="precio">Consultar</span>
         </div>
@@ -303,29 +320,29 @@
 
     <!-- Especialidad -->
     <section class="especialidad">
-        <h2>El Secreto está en el Adobo</h2>
-        <p>Nuestra receta especial de la casa garantiza que cada pieza de pollo sea jugosa, dorada e inolvidable. Un sabor que ha conquistado a la comunidad de San Juan Ixtacal.</p>
+        <h2>⭐ El Secreto está en el Adobo ⭐</h2>
+        <p>Nuestra receta especial de la casa hace que cada pieza de pollo sea jugosa, dorada e inolvidable. ¡Sabor 100% mexicano que conquista!</p>
     </section>
 
     <!-- Ubicación -->
     <section class="ubicacion">
-        <h2>Ubicación</h2>
-        <p><strong>Avenida Principal de San Juan Ixtacal.</strong></p>
-        <p>Justo enfrente del quiosco, al lado de la iglesia.</p>
+        <h2>📍 Visítanos</h2>
+        <p><strong>Avenida Principal de San Juan Ixtacal</strong></p>
+        <p>Justo enfrente del quiosco, al lado de la iglesia</p>
         
         <div class="mapa-placeholder">
-            Mapa de Google Maps (Insertar iframe aquí)
+            🗺️ Aquí va el mapa de Google Maps
         </div>
         
-        <p>Horario de atención: Todos los días de 1:00 PM a 9:00 PM</p>
+        <p>🕐 Horario: Todos los días de 1:00 PM a 9:00 PM</p>
     </section>
 
     <footer>
-        <p>2026 Rosticería El Kiosko. Todos los derechos reservados.</p>
+        <p>© 2026 Rosticería El Kiosko - San Juan Ixtacal | Hecho con ❤️ para nuestra comunidad</p>
     </footer>
 
-    <!-- Botón Flotante de WhatsApp con ícono SVG profesional -->
-    <a href="https://wa.me/521XXXXXXXXXX?text=Hola,%20me%20gustaria%20hacer%20un%20pedido" class="whatsapp-float" target="_blank" title="Contactar por WhatsApp">
+    <!-- Botón Flotante WhatsApp -->
+    <a href="https://wa.me/521XXXXXXXXXX?text=Hola,%20quiero%20hacer%20un%20pedido" class="whatsapp-float" target="_blank" title="Pedir por WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
     </a>
 
